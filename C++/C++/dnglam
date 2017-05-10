@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<iomanip.h>
+#include<conio.h>
+#include<math.h>
+struct sinhvien{
+	char ma[10],ho[15],ten[20],nt[20];
+	float toan,tin,ta,ktlt,dtb;
+	struct mon{
+		float tinchi;
+	};
+};
+void nhap(sinhvien *sv,int n)
+{
+	for(int i=1;i<n;i++)
+	{
+		cout<<i<<". Sinh vien "<<i<<endl;
+		cin.ignore(1);
+		cout<<"  > Ma: "; cin.getline(sv[i].ma,10);
+		cout<<"  > Ho: "; cin.getline(sv[i].ho,15);
+		cout<<"  > Ten: "; cin.getline(sv[i].ten,20);
+		cout<<"  > Diem toan: "; cin>>sv[i].toan;
+		cout<<"  > Diem Tin: "; cin>>sv[i].tin;
+		cout<<"  > Diem T.a: "; cin>>sv[i].ta;
+		cout<<"  > Diem KTLT: "; cin>>sv[i].ktlt;
+		sv[i].dtb=(sv[i].toan);
+	}
+}

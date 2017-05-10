@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+#include<iomanip.h>
+#inlcude<math.h>
+struct nhanvien{
+	char ma[15],ho[20],ten[10];
+	float luong,heso;
+};
+void nhap(nhanvien *nv,int n){
+	for(int i=1;i<=n;i++){
+		cout<<"  + Nhap nhan vien thu "<i<<endl;
+		cin.ignore(1);
+		cout<<"\t\t > Ma NV: "; cin.getline(nv[i].ma,15);
+		cout<<"\t\t > Ho NV: "; cin.getline(nv[i].ho,20);
+		cout<<"\t\t > Ten NV: "; cin.getline(nv[i].ten,20);
+		cout<<"\t\t > Nhap Luong: "; cin>>luong;
+	}
+}
+void ghitep(nhanvien *nv,int n){
+	ofstream tep("nv.inp",ios::in || ios::binary);
+	if(!tep){
+		cout<<"=> Khong mo duoc tep"<<tep<<endl;
+	}
+	tep.write((char*)&nv,sizeof(nhanvien));
+	tep.close();
+}

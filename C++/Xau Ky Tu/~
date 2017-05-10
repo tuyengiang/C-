@@ -1,0 +1,18 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+#include<iomanip.h>
+int main(){
+	int a[100],n,dem
+	dem=0;
+	cout<<"Nhap n: "; cin>>n;
+	for(int i=1;i<=n;i++){
+		cout<<"a["<<i<<"]= "; cin>>a[i];
+	}
+	for(int i=1;i<=n;i++){
+		if(a[i]==5){
+			dem+=1;
+		}
+	}
+	cout<<"=> so co gia tri cuo cung la 5 la: "<<dem<<endl;
+}
